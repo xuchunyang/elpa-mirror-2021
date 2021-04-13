@@ -1,6 +1,7 @@
 ;; -*- lexical-binding: t; -*-
 
 (require 'json)
+(require 'package)
 
 ;; https://elpa.gnu.org/packages/ace-window-0.10.0.tar
 (with-temp-buffer
@@ -8,7 +9,7 @@
   (goto-char (point-min))
   (let ((pkgs (mapcar (lambda (p)
                         (let ((name (car p))
-                              (version (mapconcat #'number-to-string (aref (cdr p) 0) "."))
+                              (version (package-version-join (aref (cdr p) 0)))
                               (type (aref (cdr p) 3)))
                           (format "%s-%s.%s" name version (if (string= "tar" type) "tar" "el"))))
 		      (cdr (read (current-buffer))))))
