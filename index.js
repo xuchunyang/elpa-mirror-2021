@@ -78,7 +78,8 @@ class Elpa {
       recursive: true,
     });
 
-    if (!isFileTooNew("archive-contents")) {
+    const archiveFile = join(this.id, "archive-contents");
+    if (!fs.existsSync(archiveFile) || !isFileTooNew(archiveFile)) {
       await this.wget("archive-contents");
     }
 
