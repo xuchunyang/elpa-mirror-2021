@@ -1,0 +1,24 @@
+{
+  "name": "elpa-mirror-2021",
+  "version": "1.0.0",
+  "description": "制作 ELPA 镜像",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xuchunyang/elpa-mirror-2021.git"
+  },
+  "author": "徐春阳",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/xuchunyang/elpa-mirror-2021/issues"
+  },
+  "homepage": "https://github.com/xuchunyang/elpa-mirror-2021#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "debug": "^4.3.1"
+  }
+}
